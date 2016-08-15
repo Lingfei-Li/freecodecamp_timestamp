@@ -12,7 +12,7 @@ app.use(morgan("dev"));
 
 app.use(express.static(path.join(__dirname,"public")));
 
-app.get('/:timestr', (req, res)=>{
+app.get('/:timestr', function(req, res){
     var time = moment(req.params.timestr);
     var resobj = {natural: null, unix: null};
     if(isNaN(time.valueOf())) {

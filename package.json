@@ -1,16 +1,20 @@
 {
-  "name": "freecodecamp",
-  "version": "1.0.0",
-  "description": "",
-  "main": "./src/server.js",
-  "scripts": {
-    "dev": "webpack-dev-server --content-base src --inline --hot"
+  "name": "freecodecamp_timestamp",
+  "version": "0.0.1",
+  "description": "FreeCodeCamp API Project - Timestamp Microservice",
+  "main": "server.js",
+  ",scripts": {
+    "start": "node server.js"
   },
-  "author": "",
+  "author": "Lingfei Li",
   "license": "ISC",
   "dependencies": {
     "express": "^4.14.0",
     "moment": "^2.14.1",
     "morgan": "^1.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lingfei-Li/freecodecamp_timestamp"
   }
 }
