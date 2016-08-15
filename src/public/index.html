@@ -3,22 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <title>Timestamp</title>
+
+    <!--Bootstrap-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cosmo/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+    <!--Bootswatch-->
+    <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
+
 </head>
 <body>
-<h1> Timestamp Microservice </h1>
 
-<h2>User Stories:</h2>
-<ol>
-    <li>
-        User Story: I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016).
-    </li>
-    <li>
-        User Story: If it does, it returns both the Unix timestamp and the natural language form of that date.
-    </li>
-    <li>
-        User Story: If it does not contain a date or Unix timestamp, it returns null for those properties.
-    </li>
-</ol>
+<div class="container">
+
+    <h1> Timestamp Microservice </h1>
+
+    <blockquote style="display: inline-block;">
+        <h3>User Stories:</h3>
+        <ol>
+            <li>
+                I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016).
+            </li>
+            <li>
+                If it does, it returns both the Unix timestamp and the natural language form of that date.
+            </li>
+            <li>
+                If it does not contain a date or Unix timestamp, it returns null for those properties.
+            </li>
+        </ol>
+    </blockquote>
+
+    <p>That being said, there are two functions in this service:</p>
+    <ol>
+
+        <li>
+            Putting a unix timestamp (in seconds) in the route, and get the natural representation for it
+            <ul>
+                <li>
+                    Request:
+                    <code>https://radiant-bayou-77456.herokuapp.com/1450137600</code>
+                </li>
+                <li>
+                    Response:
+                    <code>{"natural":"2015-12-15","unix":1450137600}</code>
+                </li>
+            </ul>
+        </li>
+        <li>
+            Putting a unix timestamp (in seconds) in the route, and get the natural representation
+            <ul>
+                <li>
+                    Request:
+                    <code>https://radiant-bayou-77456.herokuapp.com/2015-12-15</code>
+                </li>
+                <li>
+                    Response:
+                    <code>{"natural":"2015-12-15","unix":1450137600}</code>
+                </li>
+            </ul>
+    </ol>
+
+
+</div>
 
 </body>
 </html>
