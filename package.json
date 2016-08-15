@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "description": "FreeCodeCamp API Project - Timestamp Microservice",
   "main": "server.js",
-  ",scripts": {
-    "start": "node server.js"
+  "scripts": {
+    "server": "node ./src/server.js"
   },
   "author": "Lingfei Li",
   "license": "ISC",

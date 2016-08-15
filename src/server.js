@@ -8,6 +8,8 @@ var moment = require('moment');
 
 var app = express();
 
+app.set('port', (process.env.PORT || 5000));
+
 app.use(morgan("dev"));
 
 app.use(express.static(path.join(__dirname,"public")));
@@ -29,9 +31,7 @@ app.get('/:timestr', function(req, res){
     res.json(resobj);
 });
 
-var port = 1234;
-http.createServer(app).listen(port);
 
-
-
-console.log("server started on port", port);
+app.listen(app.get('port'), function() {
+    console.log('Node app is running on port', app.get('port'));
+});
